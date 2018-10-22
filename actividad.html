@@ -1,0 +1,216 @@
+<!DOCTYPE html><html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+		<title>Actividad Relacionar Columnas</title>
+		<link rel="stylesheet" type="text/css" href="styles_com.css">
+		<link rel="stylesheet" type="text/css" href="styles_part.css">
+				<script src="APIScorm.js"></script>
+				<script src="actividad.js"></script>
+		<script src="common.js"></script>
+		<script src="jquery.fittext.js"></script>
+		<script src="particulars.js"></script>
+        <script>
+			$(document).data("loadingXmlError","Error en la lectura del fichero XML");
+						$(document).data("PRMO","3");
+		</script>
+	</head>
+	<body> 
+    
+		    <!-- Logo personalizado -->
+    <div class="logoPersonalizado">
+        <div class="padLogoPersonalizado">
+            <img id="imgLogo" src="">
+        </div>
+    </div>
+    <div class="franjaPersonalizada">
+    	<img id="imgFranja" src="" alt="">
+    </div>
+        
+    <div id="all">
+        <!-- cargando -->
+ 
+        <div id="preLoad" class="cargapremium">
+        </div>
+        
+		<!-- informacion previa a la actividad -->
+    
+		<div id="contentPreActividad">
+			<div id="preActividad">
+				<div class="iconActividad">
+					<img src="img_html5/iconoRuletaPalabras.png" width="240" height="210">
+				</div>
+				<div class="colInfoActividad">
+					<h1 id="tituloInicio"></h1>
+					<div class="descripcionActividad" id="desAct">
+						<div class="contentDescripcion">
+							<p id="descripcionInicio"></p>
+						</div>    
+					</div>
+					<div class="toggleMostrar">
+						<div class="expand">
+							<a href="#" id="inicioMas"></a>
+						</div>
+						<div class="collapse">
+							<a href="#" id="inicioMenos"></a>
+						</div>
+					</div>
+					<div class="infoPrimary row">
+						<div class="boxInfo maxTime" id="cajaTiempoInicio">
+							<div class="contentInfo">
+								<span class="datoInfo" id="inicioTiempo"></span>
+								<span class="explicacionInfo" id="inicioTitTiempo"></span>
+							</div>
+						</div>
+						<div class="boxInfo maxLive" id="cajaIntentosInicio">
+							<div class="contentInfo">
+								<span class="datoInfo" id="inicioIntentos"></span>
+								<span class="explicacionInfo" id="inicioTitIntentos"></span>
+							</div>
+						</div>
+					</div>
+					<div class="infoSecondary row" id="inicioSensible">
+						<div class="txtSensible" id="inicioTitSensible"></div>
+						<div class="contentSensible">
+							<div class="mayusSensible" id="inicioMay"><span class="iSensible"></span><span id="inicioTitMay"></span></div>
+							<div class="acentosSensible" id="inicioAce"><span class="iSensible"></span><span id="inicioTitAcentos"></span></div>
+						</div>
+					</div>
+					<div id="footerPreAct">
+						<div class="btnComenzar" id="btnComenzarInicio">
+							<a href="#" class="btn btn-large btn-primary" id="btnComenzar"></a>
+						</div>
+						<div class="infoExtraPreAct">
+							<div class="row">
+								<div class="nomAutor le">
+									<strong><span id="inicioAutor"></span></strong><span id="autor"></span>
+								</div>
+								<div class="optionsAct ri">
+                                    <a href="" id="enlacePantallaCompletaP" class="full" target="_blank"></a>
+                                    <a href="print.html" id="enlaceImprimirP" class="print" target="_blank"></a>
+									<a href="#" id="btnAyuda" class="ayuda"></a>
+                                    <a href="http://www.educaplay.com" id="btnEducaplayA" class="educaplay" title="Educaplay" target="_blank"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div id="banner">
+				<div class="blockBanner">
+            		<div class="close" id="cerrarPubli"><a href="#">&times;</a></div>
+            		<a id="enlacePubli" href="javascript: return false;" target="_blank" rel="nofollow"><img id ="bannerPubli" src="img_html5/adrBanner.png" alt=""></a>
+        		</div>
+			</div>
+		</div>
+
+		<!-- comienza la actividad -->
+
+    	<div id="contentAct">	
+           	<div id="headAct">
+           		<div class="row">
+					<div class="optionsAct ri">
+						<a href="#" id="enlacePantallaCompleta" class="full" target="_blank"><div id="tooltipPC" class="tooltip abajo izquierda"></div></a>
+						<a href="print.html" id="enlaceImprimir" class="print" target="_blank"><div id="tooltipI" class="tooltip abajo izquierda"></div></a>
+						<a href="#" id="enlaceReiniciar" class="reiniciar"><div id="tooltipR" class="tooltip abajo izquierda"></div></a>
+						<a href="#" id="enlaceAyuda" class="ayuda"><div id="tooltipA" class="tooltip abajo izquierda"></div></a>
+						<a href="http://www.educaplay.com" id="enlaceEducaplay" class="educaplay" target="_blank"><div id="tooltipED" class="tooltip abajo izquierda">Educaplay</div></a>
+					</div>
+					<div id="tituloAct" class="titActividad"><div id="enlaceTitAct"></div></div>     
+           		</div>
+           	</div>
+           	<div class="boxIndicadores">
+				<ul class="indicadores row" id="datosCabecero">
+					<li class="intentos">
+						<div class="boxIndicador" id="cajaIntentos">
+							<div id="numIntentos" class="numIndicador"></div>
+							<div id="titIntentos" class="titIndicador"></div>
+						</div>
+					</li>
+					<li class="puntos">
+						<div class="boxIndicador">
+							<div class="points">
+								<div class="boxArrow">
+									<div id="numPuntos" class="numIndicador"></div><div id="titPuntos" class="titIndicador"></div>
+								</div>
+								<div class="bgArrow"></div>
+							</div>
+						</div>
+					</li>
+					<li class="tiempo">
+						<div class="boxIndicador" id="cajaTiempo">
+							<div id="numTiempo" class="numIndicador"></div>
+							<div id="titTiempo" class="titIndicador"></div>
+						</div>
+					</li>
+				</ul>
+			</div>           
+        	<div id="bodyAct" class="row">
+<div class="mEduca"></div>        
+           		<div id="main">
+           			<div id="wrapper">									
+                        <div id="scroller">
+                        	<div id="lienzo">
+                			</div>
+                        </div>
+                	</div>
+           		</div>
+           	</div>
+           	<div id="footAct">
+           	</div>
+        </div>
+		
+		<!-- comienza la pantalla final -->
+		
+		<div id="resumen">
+			<div id="headerResumen" class="actSuperada">
+				<div class="estadoActividad" id="textoCorrecto"></div>
+				<div class="nombreActividad" id="tituloCorrecto"></div>
+			</div>
+			<div id="headerResumen" class="actNoSuperada">
+				<div class="estadoActividad" id="textoMAL"></div>
+				<div class="nombreActividad" id="tituloMAL"></div>
+			</div>
+			<div id="correccion"></div>
+			<div class="groupInfoPlayer">
+				<div id="resultados" class="col3">
+					<ul>
+						<li class="rPuntos"><span class="rDatos" id="valorPuntosI"></span><span id="finalTitPuntos3"></span></li>
+						<li class="rTiempo" id='cajaTiempoFinal'><span class="rDatos" id="valorTiempoI"></span><span id="finalTitTiempo3"></span></li>
+						<li class="rIntentos" id='cajaIntentosFinal'><span class="rDatos" id="valorIntentos"></span><span id="finalTitIntentos3"></span></li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="groupInfoRespuestas">
+				<div id="respuestaResultados">
+					<ul id='listaFinal'></ul>
+				</div>
+				<div class="btnsExtraResumen">
+					<a href="#" class="btn btn-large" id="btnReiniciar"></a>
+				</div>
+			</div>
+            
+			<div class="clear"></div>
+		</div>
+		<div id="help" class="modalWhite oculto">
+        	<div class="close">
+            	<a href="#">&times;</a>
+          	</div>    	
+          	<div class="contentModal">
+            	<div class="titModalWhite" id="textoAyuda"></div>
+             	<div class="infoModal" id="pantallaAyuda"></div>
+           	</div>         
+            <div class="btnsPistaExtra"> 
+            	<ul> 
+                	<li><a href="javascript: return false;" class="btn" id="btnAceptar"></a></li>
+               	</ul>
+         	</div>
+   		</div>
+     	<div class="shadow oculto" id="shadowHelp"></div>               
+	</div>
+	<div id="sonidos"></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html><html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<script src="actividad.js"></script>
+		<script src="jq.js"></script>
+		<script src="jquery.fittext.js"></script>
+		<script src="print.js"></script>
+		<link rel="stylesheet" type="text/css" href="print.css">
+		<script>
+			$(document).data("loadingXmlError","Error al cargar el fichero XML");
+		</script>
+</head>
+<body>
+	<div id="all">
+		<div id="header">
+			<div class="logo">
+            	<a href="http://www.educaplay.com" target="_blank"><img src="img_html5/logoEducaplay.png" alt="Educaplay"></a>
+            </div>
+    		<div class="datosActividad">
+            		<div class="titAct"><h1 id="txtTitAct"></h1></div>
+           			<span id="textoAutor"></span><span id="nombreAutor"></span>
+            </div>
+    		<div class="clear"></div>
+		</div>
+		<div id="actividad">
+			<div id="lienzo"></div>
+    </div>
+    <div id="pistas">
+			<div class="col colizq">
+				<div class="listPistas">
+				<ul id="pistasDerecha">
+				</ul>
+				</div>
+			</div>
+			<div class="col colDer">
+				<div class="listPistas">
+				<ul id="pistasIzquierda">
+				</ul>
+				</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</body>
+</html>

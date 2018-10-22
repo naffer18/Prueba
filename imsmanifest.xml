@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!--This is a Reload version 1.2 SCORM 1.2 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" identifier="MANIFEST-66939014-7EB1-1AC0-66F4-7B4680768B5D" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <organizations default="ORG-A8F5E024-C714-07AE-BDE7-3C03998B7E45">
+    <organization identifier="ORG-A8F5E024-C714-07AE-BDE7-3C03998B7E45" structure="hierarchical">
+      <title>Banderas de paises</title>
+      <item identifier="item1" isvisible="true" identifierref="ruleta_palabras_Banderas de paises">
+        <title>Banderas de paises</title>
+       </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource type="webcontent" adlcp:scormtype="sco" identifier="ruleta_palabras_Banderas de paises" href="actividad.html">
+      <file href="actividad.html" />
+      <file href="actividad.swf" />
+    </resource>
+  </resources>
+</manifest>
+
